@@ -1,0 +1,123 @@
+.forecast-container {
+  background-color: var(--surface);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 16px var(--shadow);
+  margin-bottom: 32px;
+}
+
+.forecast-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.forecast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.forecast-card {
+  background-color: var(--background);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.forecast-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 24px var(--shadow);
+  border-color: var(--primary);
+}
+
+.forecast-date {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.forecast-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: block;
+}
+
+.forecast-condition {
+  font-size: 14px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.forecast-temp {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.temp-max {
+  color: var(--primary);
+}
+
+.temp-separator {
+  color: var(--text-secondary);
+  margin: 0 4px;
+}
+
+.temp-min {
+  color: var(--text-secondary);
+}
+
+.forecast-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.forecast-detail {
+  font-size: 12px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+@media (max-width: 768px) {
+  .forecast-container {
+    padding: 20px;
+  }
+
+  .forecast-title {
+    font-size: 20px;
+  }
+
+  .forecast-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+  }
+
+  .forecast-card {
+    padding: 16px;
+  }
+
+  .forecast-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .forecast-temp {
+    font-size: 20px;
+  }
+}
